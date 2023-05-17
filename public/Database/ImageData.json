@@ -1,0 +1,11 @@
+{
+    "image-1.jpg" : {
+        "filename" : "image-1.jpg",
+        "path" : "gallery/image-1.jpg",
+        "heading" : "Amazing Artwork",
+        "description" : "This is a fun project for a Food Company",
+        "likes" : 915,
+        "shares" : 328,
+        "comments": 0
+    }
+}
