@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ScrollTrigger, gsap } from "gsap/all";
+import { Analytics } from '@vercel/analytics/react';
 
 import "./App.css";
 import LandingComponent from "./Components/LandingComponent";
@@ -112,7 +113,7 @@ function App() {
 		<div>
 			{/* This displays the entering page when the MainPage state is false and when the "Enter" button
 				is clicked it turns the MainPage stqte to true and display the contents of the Website */}
-				
+
 			{!MainPage ? (
 				// Entering page content
 				<div className="w-[100vw] h-[100vh] flex justify-center items-center">
@@ -171,6 +172,8 @@ function App() {
 					</section>
 				</div>
 			)}
+			{/* This is for vercel page analytics */}
+			<Analytics/>
 		</div>
 	);
 }
