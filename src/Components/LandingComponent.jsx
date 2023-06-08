@@ -47,7 +47,7 @@ const LandingComponentContent = (props) => {
 				<div className="flex justify-center items-center">
 					<h5 className="text-xl leading-8 w-[75%] z-[1] text-c_text">
 						<span className="text-c_yellow drop-shadow-['5px 5px 5px #ffffff']">
-							I'm Sairam
+							I'm Sai
 						</span>{" "}
 						— The Amalgamation of Creativity and Technology. As both
 						a Skilled Developer and Visionary 3D Artist, I bring
