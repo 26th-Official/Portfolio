@@ -1,53 +1,25 @@
 .Neon_Text {
-	text-shadow: 0 0 5px #ff8801, 0 0 15px #ff8801, 0 0 20px #ff8801,
-		0 0 40px #ff8801, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-	color: #fff6a9;
-	/* animation: blink 12s infinite;
-	-webkit-animation: blink 12s infinite; */
+	text-shadow: 0 0 5px #00cfdd, 0 0 15px #00cfdd, 0 0 20px #00cfdd,
+		0 0 40px #00cfdd, 0 0 60px #00a2ff, 0 0 10px #00cfdd, 0 0 98px #00a2ff;
+	color: #a9fffb;
 }
 
-/* @-webkit-keyframes blink {
-	20%,
-	24%,
-	55% {
-		color: #111;
-		text-shadow: none;
-	}
-
-	0%,
-	19%,
-	21%,
-	23%,
-	25%,
-	54%,
-	56%,
-	100% {
-		text-shadow: 0 0 5px #ff8801, 0 0 15px #ff8801, 0 0 20px #ff8801,
-			0 0 40px #ff8801, 0 0 60px #ff0000, 0 0 10px #ff8d00,
-			0 0 98px #ff0000;
-		color: #fff6a9;
-	}
+/* Extra small devices (phones) */
+@media only screen and (max-width: 576px) {
+	/* CSS rules for phones */
 }
 
-@keyframes blink {
-	20%,
-	24%,
-	55% {
-		color: #111;
-		text-shadow: none;
-	}
+/* Small devices (tablets) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+	/* CSS rules for tablets */
+}
 
-	0%,
-	19%,
-	21%,
-	23%,
-	25%,
-	54%,
-	56%,
-	100% {
-		text-shadow: 0 0 5px #ff8801, 0 0 15px #ff8801, 0 0 20px #ff8801,
-			0 0 40px #ff8801, 0 0 60px #ff0000, 0 0 10px #ff8d00,
-			0 0 98px #ff0000;
-		color: #fff6a9;
-	}
-} */
+/* Medium devices (desktops) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+	/* CSS rules for desktops */
+}
+
+/* Large devices (large desktops) */
+@media only screen and (min-width: 993px) {
+	/* CSS rules for large desktops */
+}

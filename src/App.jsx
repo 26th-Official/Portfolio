@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { ScrollTrigger, gsap } from "gsap/all";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
-import "./App.css";
+import styles from "./App.css";
 import LandingComponent from "./Components/LandingComponent";
+import SkillsComponent from "./Components/SkillsComponent";
 import MenuComponent from "./Components/MenuComponent";
 import EnteringComponent from "./Components/EnteringComponent";
 
 function App() {
 	const [Menu, setMenu] = useState(false);
-	const [MainPage, setMainPage] = useState(false);
+	const [MainPage, setMainPage] = useState(true);
 
 	// ------------------------------------------------------
 	// React hook for opening animation of menu
@@ -116,11 +117,11 @@ function App() {
 
 			{!MainPage ? (
 				// Entering page content
-				<div className="w-[100vw] h-[100vh] flex justify-center items-center">
+				<div className="w-[100%] h-[100vh] flex justify-center items-center">
 					<EnteringComponent MainPageStatus={EnteringPageAnim} />
 				</div>
 			) : (
-				// Main Webpage content				
+				// Main Webpage content
 				<div id="MainPage" className=" h-[100vh] ">
 					{/* main border for the website */}
 					<div className="fixed p-5 h-[100vh] w-[99vw] z-[100] pointer-events-none">
@@ -137,6 +138,8 @@ function App() {
 		  hover:bg-white hover:text-c_main"></i>
 					</div>
 
+					{/* =================================== */}
+
 					{/* Menu button with Close Menu prop which switches the Menu state to false */}
 					{Menu && (
 						<div id="MenuComponent" className="fixed z-[100]">
@@ -145,11 +148,16 @@ function App() {
 					)}
 
 					{/* =================================== */}
-					<div className="">
-						<div id="landingSection" className="fixed opacity-50">
+					<div>
+						<div className="fixed">
 							<LandingComponent />
 						</div>
+						<div className="fixed">
+							<SkillsComponent />
+						</div>
 					</div>
+
+					{/* =================================== */}
 
 					{/* dummy sections for the scroll trigger */}
 					<section id="Section_A" style={{ ...Dummy_Styles }}>
@@ -170,10 +178,46 @@ function App() {
 						style={{ ...Dummy_Styles, borderColor: "yellow" }}>
 						Section_D
 					</section>
+
+					{/* =================================== */}
+					{/* Smoke video overlay for the website with transparent video in WEBM format */}
+					<div>
+						<div className="fixed top-0 opacity-10 w-[100vw] h-[100vh] z-[9999] pointer-events-none">
+							<div className={`${styles.smoke_overlay}`}>
+								<video
+									className={`${styles.smoke_video}`}
+									autoPlay
+									loop
+									muted>
+									<source
+										src="/Videos/Smoke_Transparent.webm"
+										type="video/webm"
+									/>
+								</video>
+							</div>
+						</div>
+						<div className="fixed rotate-180 top-0 opacity-10 w-[100vw] h-[100vh] z-[9999]">
+							<div className={`${styles.smoke_overlay}`}>
+								<video
+									className={`${styles.smoke_video}`}
+									autoPlay
+									loop
+									muted>
+									<source
+										src="/Videos/Smoke_Transparent.webm"
+										type="video/webm"
+									/>
+								</video>
+							</div>
+						</div>
+					</div>
+
+					{/* =================================== */}
+
 				</div>
 			)}
 			{/* This is for vercel page analytics */}
-			<Analytics/>
+			<Analytics />
 		</div>
 	);
 }
