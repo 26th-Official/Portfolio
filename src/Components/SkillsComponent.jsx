@@ -5,6 +5,7 @@ import {
 	Environment,
 	Html,
 } from "@react-three/drei";
+
 import { Canvas, useFrame } from "@react-three/fiber";
 import { ScrollTrigger, gsap } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
@@ -15,51 +16,51 @@ const SkillsComponent = () => {
 
 	// ================ Scroll Transistions=====================
 
-	useEffect(() => {
-		gsap.fromTo(
-			"#SkillSection",
-			{
-				opacity: 0,
-			},
-			{
-				opacity: 1,
-				scrollTrigger: {
-					trigger: "#Section_B",
-					markers: true,
-					scrub: true,
-					start: "center 90%",
-					end: "center 50%",
-				},
-			}
-		);
+	// useEffect(() => {
+	// 	gsap.fromTo(
+	// 		"#SkillSection",
+	// 		{
+	// 			opacity: 0,
+	// 		},
+	// 		{
+	// 			opacity: 1,
+	// 			scrollTrigger: {
+	// 				trigger: "#Section_B",
+	// 				markers: true,
+	// 				scrub: true,
+	// 				start: "center 90%",
+	// 				end: "center 50%",
+	// 			},
+	// 		}
+	// 	);
 
-		gsap.to("#FrontEndSkills", {
-			x: -800,
-			scrollTrigger: {
-				trigger: "#Section_B",
-				markers: true,
-				scrub: true,
-				start: "center 30%",
-				end: "center top",
-			},
-		});
+	// 	gsap.to("#FrontEndSkills", {
+	// 		x: -800,
+ 	// 		scrollTrigger: {
+	// 			trigger: "#Section_B",
+	// 			markers: true,
+	// 			scrub: true,
+	// 			start: "center 30%",
+	// 			end: "center top",
+	// 		},
+	// 	});
 
-		gsap.fromTo("#BackEndSkills",
-		{
-			x: 800,
-		},
-		{
-			x: 0,
-			scrollTrigger: {
-				trigger: "#Section_B",
-				markers: true,
-				scrub: true,
-				start: "center 30%",
-				end: "center top",
-			},
-		});
+	// 	gsap.fromTo("#BackEndSkills",
+	// 	{
+	// 		x: 800,
+	// 	},
+	// 	{
+	// 		x: 0,
+	// 		scrollTrigger: {
+	// 			trigger: "#Section_B",
+	// 			markers: true,
+	// 			scrub: true,
+	// 			start: "center 30%",
+	// 			end: "center top",
+	// 		},
+	// 	});
 
-	}, []);
+	// }, []);
 
 	// ==========================================================
 
@@ -89,6 +90,7 @@ const SkillsComponent = () => {
 						z: 0,
 					});
 				}}
+
 				position={
 					props.position
 						? [

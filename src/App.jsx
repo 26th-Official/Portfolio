@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { ScrollTrigger, gsap } from "gsap/all";
 import { Analytics } from "@vercel/analytics/react";
 
-import styles from "./App.css";
 import LandingComponent from "./Components/LandingComponent";
 import SkillsComponent from "./Components/SkillsComponent";
 import MenuComponent from "./Components/MenuComponent";
 import EnteringComponent from "./Components/EnteringComponent";
+
+import styles from "./App.module.css";
 
 function App() {
 	const [Menu, setMenu] = useState(false);
@@ -152,9 +153,9 @@ function App() {
 						<div className="fixed">
 							<LandingComponent />
 						</div>
-						<div className="fixed">
+						{/* <div className="fixed">
 							<SkillsComponent />
-						</div>
+						</div> */}
 					</div>
 
 					{/* =================================== */}
@@ -181,7 +182,8 @@ function App() {
 
 					{/* =================================== */}
 					{/* Smoke video overlay for the website with transparent video in WEBM format */}
-					<div>
+					
+					{/* <div>
 						<div className="fixed top-0 opacity-10 w-[100vw] h-[100vh] z-[9999] pointer-events-none">
 							<div className={`${styles.smoke_overlay}`}>
 								<video
@@ -210,7 +212,7 @@ function App() {
 								</video>
 							</div>
 						</div>
-					</div>
+					</div> */}
 
 					{/* =================================== */}
 
